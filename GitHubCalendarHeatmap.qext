@@ -1,0 +1,10 @@
+{
+  "name": "GitHub Calendar Heatmap",
+  "description": "GitHub-style calendar contribution heatmap for Qlik Sense. Uses one date dimension and one measure.",
+  "type": "visualization",
+  "version": "1.1.0",
+  "author": "Torvic / Victor Ramos",
+  "homepage": "",
+  "keywords": "calendar, heatmap, github, contributions, date, qlik",
+  "icon": "extension"
+}

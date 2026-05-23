@@ -1,0 +1,25 @@
+.qgh-wrap { width: 100%; height: 100%; box-sizing: border-box; padding: 12px; overflow: auto; background: #fff; color: #24292f; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+.qgh-inner { position: relative; min-width: 720px; }
+.qgh-months { position: relative; height: 18px; margin-left: 28px; font-size: 12px; color: #57606a; }
+.qgh-month { position: absolute; top: 0; white-space: nowrap; }
+.qgh-grid-row { display: flex; gap: 4px; }
+.qgh-weekdays { width: 24px; display: grid; grid-template-rows: repeat(7, 12px); gap: 3px; flex: 0 0 24px; font-size: 10px; color: #57606a; }
+.qgh-weekday { line-height: 12px; height: 12px; }
+.qgh-weeks { display: grid; grid-auto-flow: column; grid-auto-columns: 12px; grid-template-rows: repeat(7, 12px); gap: 3px; }
+.qgh-cell { width: 12px; height: 12px; border-radius: 2px; outline: 1px solid rgba(27,31,35,.06); cursor: default; background: var(--qgh-color, #ebedf0); transform-origin: center; transition: transform .16s ease, outline .16s ease, box-shadow .16s ease, opacity .16s ease; }
+.qgh-cell.qgh-selectable { cursor: pointer; }
+.qgh-cell.qgh-selectable:hover { outline: 1px solid rgba(27,31,35,.35); transform: scale(1.18); box-shadow: 0 2px 7px rgba(27,31,35,.16); }
+.qgh-cell.qgh-selected { outline: 2px solid rgba(9,105,218,.88); box-shadow: 0 0 0 2px rgba(9,105,218,.18); }
+.qgh-cell.qgh-alternative { opacity: .72; }
+.qgh-cell.qgh-excluded { opacity: .32; }
+.qgh-cell.qgh-animate { animation: qgh-fill-in .56s cubic-bezier(.2,.8,.2,1) both; animation-delay: var(--qgh-delay, 0ms); }
+@keyframes qgh-fill-in {
+  0% { background: var(--qgh-empty, #ebedf0); transform: scale(.35); opacity: .25; border-radius: 6px; }
+  55% { transform: scale(1.22); opacity: 1; }
+  100% { background: var(--qgh-color, #ebedf0); transform: scale(1); opacity: 1; border-radius: 2px; }
+}
+.qgh-legend { display: flex; align-items: center; justify-content: flex-end; gap: 6px; margin-top: 10px; margin-left: 28px; font-size: 11px; color: #57606a; }
+.qgh-legend-cells { display: flex; gap: 3px; }
+.qgh-legend-cell { width: 12px; height: 12px; border-radius: 2px; outline: 1px solid rgba(27,31,35,.06); }
+.qgh-tooltip { position: fixed; z-index: 999999; pointer-events: none; padding: 7px 9px; border-radius: 6px; background: rgba(36,41,47,.96); color: #fff; font-size: 12px; line-height: 1.35; box-shadow: 0 8px 24px rgba(140,149,159,.35); transform: translate(10px,10px); white-space: nowrap; }
+.qgh-empty { padding: 16px; color: #57606a; font-size: 13px; }
