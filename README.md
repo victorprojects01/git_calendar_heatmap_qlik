@@ -130,5 +130,10 @@ Adicione:
 * 1 dimensão de data
 * 1 medida
 
+Resultado - Result
+
+<img width="766" height="149" alt="image" src="https://github.com/user-attachments/assets/89fa98cd-4c09-478b-a6b6-23c3007362b6" />
+
+
 Pronto 🚀
 
